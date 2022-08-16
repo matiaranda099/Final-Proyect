@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCV | COMIDAS</title>
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./img/Organic_Food_icon-icons.com_68717.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/index.css">
+
+</head>
+
+<body>
+    <header>
+        <h1 id="titulo" class="titulo">Mi Cocina <span>Veggie</span></h1>
+        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+    </header>
+
+    <section class="banner py-5">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-lg-6 py-5">
+                    <p class="text-light m-0">Comidas 100% caseras y congeladas</p>
+                    <h2>Bienvenidos <span class="color-acento">a mi cocina veggie!🍒</span></h2>
+                    <div class="line m-4"></div>
+                    <p class="mx-auto lead text-light">
+                        Soy Aux. en Bromatología y estudiante de Lic. en Nutrición, llevo una vida vegetariana hace 9
+                        años y me encanta cocinar
+                        en mis tiempos libres, realizo productos vegetarianos congelados 100% naturales y
+                        saludables, algunos de ellos aptos para veganos.
+                    </p>
+                    <a href="#contenedor-productos">
+                        <button class="mbtn1">Ver productos</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--MAIN-->
+    <main id="contenedor-productos">
+    </main>
+    <!--MAIN-->
+
+    <!--modal emergente que muestra el carrito-->
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+
+            <div id="carrito-contenedor"></div>
+
+            <p id="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <button id="vaciar-carrito" class="boton-agregar">Vaciar </button>
+            <button id="finalizar-compra" class="boton-agregar" onclick="finalizarCompra()">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!--SERVICIOS-->
+    <section class="container">
+        <div data-aos="fade-left" class="row my-5">
+            <div class="col-md-4 col-sm-6 bg-light text-center border py-5 px-3">
+                <i class="fa-solid fa-comment fs-1"></i>
+                <h4 class="mb-3 fw-normal text-uppercase">Asesoramiento Online</h4>
+                <p class="text-secondary">Deja tu consulta al momento de realizar la compra, ante cualquier inquietud.
+                </p>
+            </div>
+            <div class="col-md-4 col-sm-6 bg-light text-center border py-5 px-3">
+                <i class="fa-solid fa-lock fs-1"></i>
+                <h4 class="mb-3 fw-normal text-uppercase">compra segura</h4>
+                <p class="text-secondary">Una vez realizada la compra y relleno el formualario, nos llega directamente a
+                    nosotros, asique no tenes de que preocuparte.</p>
+            </div>
+            <div class="col-md-4 col-sm-6 bg-light text-center border py-5 px-3">
+                <i class="fa-solid fa-circle-up fs-1"></i>
+                <h4 class="mb-3 fw-normal text-uppercase">Actualización</h4>
+                <p class="text-secondary">Actualizamos todos los meses los productos y renovamos stock, para que pruebes
+                    todo lo que te hace feliz.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!--footer-->
+    <footer class="text-center text-white">
+        <!-- Grid container -->
+        <div class="container pt-4">
+            <!-- Section: Social media -->
+            <section class="mb-1">
+                <!-- Facebook -->
+                <a class="btn btn-link btn-floating btn-lg text-light m-1"
+                    href="https://www.instagram.com/micocina.veggie/" target="_blank" rel="noopener noreferrer"
+                    role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-link btn-floating btn-lg text-light m-1"
+                    href="https://www.instagram.com/micocina.veggie/" target="_blank" rel="noopener noreferrer"
+                    role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-link btn-floating btn-lg text-light m-1"
+                    href="https://www.instagram.com/micocina.veggie/" target="_blank" rel="noopener noreferrer"
+                    role="button" data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-link btn-floating btn-lg text-light m-1"
+                    href="https://www.instagram.com/micocina.veggie/" target="_blank" rel="noopener noreferrer"
+                    role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center text-dark p-3">
+            © 2020 Copyright: Tienda de alimentos #freeAnimal.
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+    <!--SWEET ALERT-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <!--MODALJS-->
+    <script src="./js/modal.js"></script>
+    <!--INDEXJS-->
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>
